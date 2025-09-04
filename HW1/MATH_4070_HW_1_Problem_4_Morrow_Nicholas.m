@@ -20,10 +20,10 @@ diary(dfile)
 % Part (a)
 
 % IV (velocity) in multiples of 100 ft/sec as column vector
-tData = [0 2 4 6 8 10].';
+tData = [0; 2; 4; 6; 8; 10];
 
 % DV (force) in multiples of 100 lb as column vector
-fData = [0 2.90 14.8 39.6 74.3 119].';
+fData = [0; 2.90; 14.8; 39.6; 74.3; 119];
 
 % turns a scalar t into the row [1 t t^2 … t^5]
 r = @(t) [1 t t^2 t^3 t^4 t^5];
