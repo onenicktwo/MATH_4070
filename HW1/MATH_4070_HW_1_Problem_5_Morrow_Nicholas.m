@@ -55,7 +55,7 @@ LB = inv(B) * L * B
 % Part (d)
 
 % The mapping L is one-to-one if and only if N(L) = {0}
-% We also can say N(L) = N(LB) (see a similar proof with traces in 3b)
+% We also can say N(L) = N(LB) (see an similar proof with traces in 3b using cycles)
 % Therefore we just need to find if N(LB) = {0} to show if its one-to-one or N(LB) != {0} if its not
 % Let v = (0, 0, 0, 1)^T
 LB
