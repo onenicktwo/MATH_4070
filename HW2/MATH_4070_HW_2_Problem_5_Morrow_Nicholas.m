@@ -1,0 +1,98 @@
+clear all
+
+echo on
+
+dfile ='MATH_4070_HW_2_Problem_5_Morrow_Nicholas.txt';
+if exist(dfile, 'file')
+    delete(dfile);
+end
+diary(dfile)
+
+% MATH 4070
+% HW 2
+% Problem 5
+% By Nicholas Morrow
+
+% Define the function to be approximated
+f = @(t) exp(sin(pi*t));
+
+% Define the interval [-1, 1]
+t_0 = -1;
+t_n = 1;
+
+% Define the degrees of the polynomials
+N_values = [1, 3, 5];
+max_N = max(N_values);
+
+% Create a grid of t-values for plotting, 1000 points
+t_plot = linspace(t_0, t_n, 1000).';
+
+% Prepare for looping over each N value, each col will have a polynomial's values
+G_N = zeros(numel(t_plot), numel(N_values));
+
+% Loop through each required degree N
+for i = 1:numel(N_values)
+    N = N_values(i);
+
+    % By what the problem said approximating g_N is found by solving the normal equations
+    % A*c = b, where A is the Gram matrix for the basis {1, t, ..., t^N}.
+
+    dim = N + 1; % Dimension of the system
+
+    % Construct Gram Matrix A
+    % A_ij = <t^i, t^j> = integral -1 to 1 of t^(i+j) dt
+    A = zeros(dim, dim);
+    for row_idx = 0:N
+        for col_idx = 0:N
+            power = row_idx + col_idx;
+            % Integral of t^k from -1 to 1 is 2/(k+1) for even k, and 0 for odd k
+            if mod(power, 2) == 0
+                A(row_idx+1, col_idx+1) = 2 / (power + 1);
+            else
+                A(row_idx+1, col_idx+1) = 0;
+            end
+        end
+    end
+
+    % Construct vector b
+    % b_i = <f, t^i> = integral from -1 to 1 of f(t)*t^i dt
+    b = zeros(dim, 1);
+    for row_idx = 0:N
+        integrand = @(t) f(t) .* t.^row_idx;
+        b(row_idx+1) = integral(integrand, t_0, t_n);
+    end
+
+    % Solve system A*c=b for coeff c = [c0, c1, ..., cN]
+    c = A \ b
+
+    % Evaluate the polynomial g_N on the plotting grid
+    polyVals = polyval(flip(c), t_plot); % polyval needs highest power to lowest, so we flip c
+
+    % Store the results
+    G_N(:,i) = polyVals;
+end
+
+% Plot
+figure(1);
+
+% Original function
+plot(t_plot, f(t_plot), 'w');  hold on;
+
+% Approximations
+plot(t_plot, G_N(:,1), 'r--');   % N = 1, red
+plot(t_plot, G_N(:,2), 'b-.');   % N = 3, blue
+plot(t_plot, G_N(:,3), 'g:');   % N = 5, green
+
+% Extra thing(s) for plot
+xlim([t_0 t_n]);
+title('Approximation of f(t) = e^{sin(\pi t)} by Best-Fit Polynomials');
+xlabel('t');
+ylabel('f(t), g_N(t)');
+legend('f(t) = e^{sin(\pi t)}', 'N = 1', 'N = 3', 'N = 5', 'Location', 'northeast');
+axis tight;
+
+% Wasn't sure if I needed a creation line, uncomment to make the pdf if you want
+% print(gcf,'-dpdf','MATH_4070_HW_2_Problem_5_Morrow_Nicholas_plot.pdf')
+
+diary off
+echo off

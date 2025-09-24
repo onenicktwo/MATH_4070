@@ -2,7 +2,7 @@ clear all
 
 echo on
 
-dfile ='MATH_4070_HW_1_Problem_5_Morrow_Nicholas.txt';
+dfile ='MATH_4070_HW_2_Problem_4_Morrow_Nicholas.txt';
 if exist(dfile, 'file')
     delete(dfile);
 end
@@ -33,6 +33,7 @@ P_N = zeros(numel(t_plot), numel(N_values));
 % first coefficient is the same for all N
 a0 = (1/pi) * integral(@(t) f(t), t_0, t_n)
 
+% Loop through each required degree N
 for i = 1:numel(N_values)
     % Prepare before summation
     N = N_values(i);
@@ -60,15 +61,16 @@ figure(1);
 plot(t_plot, f(t_plot), 'w');  hold on;
 
 % Approximations
-plot(t_plot, P_N(:,1), 'r--');   % N = 1
-plot(t_plot, P_N(:,2), 'b-.');   % N = 3
-plot(t_plot, P_N(:,3), 'g:');   % N = 5
+plot(t_plot, P_N(:,1), 'r--');   % N = 1, red
+plot(t_plot, P_N(:,2), 'b-.');   % N = 3, blue
+plot(t_plot, P_N(:,3), 'g:');   % N = 5, green
 
 % Extra thing(s) for plot
 xlim([t_0 t_n]);
 title('Approximation of f(t) = e^{sin(t)} by Trigonometric Polynomials');
 xlabel('t');
 ylabel('f(t), p_N(t)');
+legend('f(t) = e^{sin(t)}', 'N = 1', 'N = 3', 'N = 5', 'Location', 'northeast');
 axis tight;
 
 
