@@ -1,0 +1,92 @@
+
+% MATH 4070
+% HW 3
+% Problem 4
+% By Nicholas Morrow
+
+% Weight w in pounds
+w = [45; 60; 72; 85; 98];
+
+% Systolic blood pressure p in mmHg
+p = [90; 95; 100; 104; 110];
+
+% Setup a least-squares problem Ax = b
+
+% This is just to make it easier to match with equation in our notes
+b = p
+
+b =
+
+    90
+    95
+   100
+   104
+   110
+
+
+% We know x must be equal to [beta_0; beta_1], so A must have two columns. From the equation beta_0 * 1 + beta_1 * ln(w) = p, A
+% has a column of ones and a column of ln(w) based on the values of w.
+A = [ones(size(w)), log(w)]
+
+A =
+
+    1.0000    3.8067
+    1.0000    4.0943
+    1.0000    4.2767
+    1.0000    4.4427
+    1.0000    4.5850
+
+
+% Now we solve Ax = b using the QR method
+[Q, R] = qr(A);
+Q
+
+Q =
+
+   -0.4472   -0.7138   -0.3743   -0.3031   -0.2420
+   -0.4472   -0.2411    0.1634    0.4581    0.7108
+   -0.4472    0.0585    0.8080   -0.2446   -0.2896
+   -0.4472    0.3312   -0.2666    0.6080   -0.4996
+   -0.4472    0.5651   -0.3305   -0.5185    0.3204
+
+R
+
+R =
+
+   -2.2361   -9.4833
+         0    0.6086
+         0         0
+         0         0
+         0         0
+
+
+% Solve Rx = Q' * b for x = [beta_0; beta_1]
+betas = R \ (Q' * b)
+
+betas =
+
+   -6.9460
+   25.1697
+
+beta0 = betas(1)
+
+beta0 =
+
+   -6.9460
+
+beta1 = betas(2)
+
+beta1 =
+
+   25.1697
+
+
+% Predict pressure for a 100 pound child
+estimate = beta0 + beta1 * log(100)
+
+estimate =
+
+  108.9646
+
+
+diary off;
