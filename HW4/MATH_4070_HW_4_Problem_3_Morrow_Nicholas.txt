@@ -118,4 +118,9 @@ ans =
 
 % Part (e)
 
+% Part (a) rref(A) suggests rank(A) = 4. A matrix with rank 4 is invertible and its kernel
+% contains only the zero vector. Part (d) found an non-zero vector v in the kernal of A.
+% The existence of that vector proves the kernal is non-trivial, which means A must be
+% not invertible. Thus, A must have a rank less then 4.
+
 diary off;
