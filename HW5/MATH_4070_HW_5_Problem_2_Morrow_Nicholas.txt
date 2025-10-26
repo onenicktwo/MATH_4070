@@ -1,0 +1,206 @@
+
+% MATH 4070
+% HW 5
+% Problem 2
+% By Nicholas Morrow
+
+A = [1 2 1 -1;
+    3 -1 2 -2];
+
+b = [2; 1];
+
+% Part (a)
+
+% For a fat and short matrix (rows < cols), our notes tells us to approximate with QR/
+% The equation for this is AP = QR.
+
+m = size(A, 1) % num of rows
+
+m =
+
+     2
+
+n = size(A, 2) % num of cols
+
+n =
+
+     4
+
+
+[Q, R, P] = qr(A)
+
+Q =
+
+   -0.3162   -0.9487
+   -0.9487    0.3162
+
+
+R =
+
+   -3.1623    0.3162   -2.2136    2.2136
+         0   -2.2136   -0.3162    0.3162
+
+
+P =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+% From notes, RP^(-1)x = Q^*b, we take transpose of Q instead since we are using real numbers
+rhs = Q' * b;
+
+% Get the first m columns of R and solve this as R1*y1 = rhs, we want y2 = 0 for a small norm
+R1 = R(:, 1:m)
+
+R1 =
+
+   -3.1623    0.3162
+         0   -2.2136
+
+y1 = R1 \ rhs
+
+y1 =
+
+    0.5714
+    0.7143
+
+y_approx = [y1; zeros(n-m, 1)]
+
+y_approx =
+
+    0.5714
+    0.7143
+         0
+         0
+
+
+% From notes, it then wants us to find x = Py
+x_approx = P * y_approx
+
+x_approx =
+
+    0.5714
+    0.7143
+         0
+         0
+
+
+% Check, should be 0 or close to 0
+A*x_approx - b
+
+ans =
+
+   1.0e-15 *
+
+   -0.2220
+         0
+
+
+% Show 2-norm
+norm(x_approx)
+
+ans =
+
+    0.9147
+
+
+% Part (b)
+
+% First find an SVD
+[U, S, V] = svd(A, "econ")
+
+U =
+
+    0.3606    0.9327
+    0.9327   -0.3606
+
+
+S =
+
+    4.4646         0
+         0    2.2510
+
+
+V =
+
+    0.7075   -0.0662
+   -0.0474    0.9889
+    0.4986    0.0940
+   -0.4986   -0.0940
+
+
+% Construct sigma
+s_diag = diag(S)
+
+s_diag =
+
+    4.4646
+    2.2510
+
+s_inv_diag = 1 ./ s_diag
+
+s_inv_diag =
+
+    0.2240
+    0.4442
+
+S_inv = diag(s_inv_diag)
+
+S_inv =
+
+    0.2240         0
+         0    0.4442
+
+
+% Plug in and calculate for: x = V * inv(S) * U^* * b
+x_svd = V * S_inv * U' * b
+
+x_svd =
+
+    0.2178
+    0.6436
+    0.2475
+   -0.2475
+
+
+% Part (c)
+
+% Find the Moore-Penrose psuedoinverse A_dagger = V * inv(S) * U^*
+A_dagger = V * S_inv * U'
+
+A_dagger =
+
+    0.0297    0.1584
+    0.4059   -0.1683
+    0.0792    0.0891
+   -0.0792   -0.0891
+
+
+% Always good to check built in functions, these are same or similar
+pinv(A)
+
+ans =
+
+    0.0297    0.1584
+    0.4059   -0.1683
+    0.0792    0.0891
+   -0.0792   -0.0891
+
+
+% Verify results based on what problem suggests
+x_dagger = A_dagger * b
+
+x_dagger =
+
+    0.2178
+    0.6436
+    0.2475
+   -0.2475
+
+
+% This is exactly what we got for part(b)
+
+diary off;
