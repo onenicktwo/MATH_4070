@@ -1,0 +1,1198 @@
+
+% MATH 4070
+% HW 7
+% Problem 6
+% By Nicholas Morrow
+
+% We are given the system: 4x'(t) = C * x(t), which can be simplified to x'(t) = C/4 * x(t) => x'(t) = M * x(t)
+C = [ 17, -86, 122, -50;
+    -12,  50, -82,  28;
+    -5,  22, -36,  12;
+    16, -70, 106, -41 ];
+M = C / 4
+
+M =
+
+    4.2500  -21.5000   30.5000  -12.5000
+   -3.0000   12.5000  -20.5000    7.0000
+   -1.2500    5.5000   -9.0000    3.0000
+    4.0000  -17.5000   26.5000  -10.2500
+
+
+% Given initial condition
+x0 = [-1; 2/3; 9/2; -6/7];
+
+% Given time parameters
+dt = 0.25;
+N = 120;
+
+% 4x120 solution matrix for storing the results
+X = zeros(4, N);
+
+% From in class, the solution to x'(t) = M*x(t) is x(t) = exp(tM) * x0.
+% Loop k=1 to N to find a soln for each step
+for k = 1:N
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+    % For each k, the time t is k * dt.
+    t_k = k * dt;
+
+    % Directly calculate the solution x(t) at this specific time t_k
+    x = expm(t_k * M) * x0;
+
+    % Store this solution vector in the k-th column of our result matrix.
+    X(:, k) = x;
+end
+
+X
+
+X =
+
+  Columns 1 through 11
+
+   27.0005   47.5210   62.1140   72.0351   78.2982   81.7204   82.9587   82.5399   80.8852   78.3298   75.1395
+  -18.3164  -32.5208  -42.8733  -50.1359  -54.9343  -57.7813  -59.0964  -59.2222  -58.4373  -56.9678  -54.9965
+   -3.8514  -10.1389  -14.7652  -18.0603  -20.2945  -21.6885  -22.4225  -22.6433  -22.4700  -21.9992  -21.3086
+   23.6153   41.8100   54.9714   64.1173   70.0791   73.5345   75.0349   75.0279   73.8757   71.8706   69.2473
+
+  Columns 12 through 22
+
+   71.5236   67.6462   63.6343   59.5858   55.5745   51.6556   47.8689   44.2424   40.7946   37.5365   34.4736
+  -52.6703  -50.1068  -47.3994  -44.6216  -41.8307  -39.0709  -36.3755  -33.7690  -31.2691  -28.8877  -26.6322
+  -20.4607  -19.5056  -18.4829  -17.4238  -16.3526  -15.2883  -14.2450  -13.2333  -12.2608  -11.3327  -10.4525
+   66.1934   62.8580   59.3586   55.7873   52.2151   48.6961   45.2708   41.9686   38.8101   35.8089   32.9731
+
+  Columns 23 through 33
+
+   31.6067   28.9336   26.4494   24.1474   22.0197   20.0577   18.2521   16.5935   15.0726   13.6799   12.4065
+  -24.5065  -22.5116  -20.6465  -18.9085  -17.2937  -15.7972  -14.4136  -13.1371  -11.9617  -10.8812   -9.8897
+   -9.6219   -8.8417   -8.1117   -7.4310   -6.7981   -6.2113   -5.6686   -5.1676   -4.7062   -4.2819   -3.8925
+   30.3061   27.8085   25.4777   23.3095   21.2984   19.4375   17.7196   16.1368   14.6813   13.3451   12.1202
+
+  Columns 34 through 44
+
+   11.2436   10.1829    9.2164    8.3366    7.5366    6.8096    6.1496    5.5509    5.0082    4.5165    4.0713
+   -8.9811   -8.1496   -7.3897   -6.6959   -6.0633   -5.4870   -4.9626   -4.4857   -4.0525   -3.6592   -3.3025
+   -3.5355   -3.2087   -2.9100   -2.6372   -2.3885   -2.1618   -1.9555   -1.7679   -1.5974   -1.4426   -1.3021
+   10.9991    9.9742    9.0384    8.1850    7.4074    6.6998    6.0562    5.4715    4.9407    4.4592    4.0227
+
+  Columns 45 through 55
+
+    3.6685    3.3043    2.9751    2.6777    2.4092    2.1669    1.9484    1.7513    1.5737    1.4137    1.2696
+   -2.9791   -2.6862   -2.4210   -2.1811   -1.9642   -1.7682   -1.5912   -1.4313   -1.2871   -1.1570   -1.0398
+   -1.1748   -1.0595   -0.9550   -0.8605   -0.7751   -0.6978   -0.6280   -0.5650   -0.5082   -0.4569   -0.4106
+    3.6273    3.2694    2.9455    2.6527    2.3881    2.1490    1.9332    1.7385    1.5629    1.4046    1.2619
+
+  Columns 56 through 66
+
+    1.1399    1.0231    0.9181    0.8236    0.7387    0.6624    0.5938    0.5322    0.4769    0.4273    0.3827
+   -0.9341   -0.8389   -0.7532   -0.6761   -0.6067   -0.5443   -0.4882   -0.4377   -0.3924   -0.3517   -0.3151
+   -0.3690   -0.3314   -0.2976   -0.2672   -0.2398   -0.2151   -0.1930   -0.1731   -0.1552   -0.1391   -0.1246
+    1.1334    1.0176    0.9135    0.8197    0.7354    0.6596    0.5915    0.5303    0.4753    0.4259    0.3815
+
+  Columns 67 through 77
+
+    0.3427    0.3069    0.2747    0.2459    0.2200    0.1968    0.1761    0.1575    0.1408    0.1259    0.1126
+   -0.2823   -0.2528   -0.2264   -0.2027   -0.1814   -0.1624   -0.1453   -0.1300   -0.1163   -0.1040   -0.0930
+   -0.1117   -0.1000   -0.0896   -0.0802   -0.0718   -0.0643   -0.0575   -0.0515   -0.0460   -0.0412   -0.0368
+    0.3417    0.3060    0.2740    0.2453    0.2195    0.1964    0.1757    0.1572    0.1406    0.1257    0.1124
+
+  Columns 78 through 88
+
+    0.1006    0.0899    0.0803    0.0718    0.0641    0.0573    0.0511    0.0457    0.0408    0.0364    0.0325
+   -0.0831   -0.0743   -0.0664   -0.0593   -0.0530   -0.0473   -0.0423   -0.0378   -0.0337   -0.0301   -0.0269
+   -0.0329   -0.0294   -0.0263   -0.0235   -0.0210   -0.0188   -0.0168   -0.0150   -0.0134   -0.0119   -0.0107
+    0.1005    0.0898    0.0802    0.0717    0.0640    0.0572    0.0511    0.0456    0.0407    0.0364    0.0325
+
+  Columns 89 through 99
+
+    0.0290    0.0259    0.0231    0.0206    0.0184    0.0164    0.0146    0.0130    0.0116    0.0104    0.0092
+   -0.0240   -0.0214   -0.0191   -0.0170   -0.0152   -0.0136   -0.0121   -0.0108   -0.0096   -0.0086   -0.0077
+   -0.0095   -0.0085   -0.0076   -0.0068   -0.0060   -0.0054   -0.0048   -0.0043   -0.0038   -0.0034   -0.0030
+    0.0290    0.0259    0.0231    0.0206    0.0184    0.0164    0.0146    0.0130    0.0116    0.0104    0.0092
+
+  Columns 100 through 110
+
+    0.0082    0.0073    0.0065    0.0058    0.0052    0.0046    0.0041    0.0037    0.0033    0.0029    0.0026
+   -0.0068   -0.0061   -0.0054   -0.0048   -0.0043   -0.0038   -0.0034   -0.0030   -0.0027   -0.0024   -0.0022
+   -0.0027   -0.0024   -0.0022   -0.0019   -0.0017   -0.0015   -0.0014   -0.0012   -0.0011   -0.0010   -0.0009
+    0.0082    0.0073    0.0065    0.0058    0.0052    0.0046    0.0041    0.0037    0.0033    0.0029    0.0026
+
+  Columns 111 through 120
+
+    0.0023    0.0021    0.0018    0.0016    0.0015    0.0013    0.0012    0.0010    0.0009    0.0008
+   -0.0019   -0.0017   -0.0015   -0.0014   -0.0012   -0.0011   -0.0010   -0.0008   -0.0008   -0.0007
+   -0.0008   -0.0007   -0.0006   -0.0005   -0.0005   -0.0004   -0.0004   -0.0003   -0.0003   -0.0003
+    0.0023    0.0021    0.0018    0.0016    0.0015    0.0013    0.0012    0.0010    0.0009    0.0008
+
+
+diary off;
